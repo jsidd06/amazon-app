@@ -1,0 +1,19 @@
+# React Native
+node_modules/
+npm-debug.log
+yarn-error.log
+*.iml
+*.log
+ios/Pods/
+ios/build/
+ios/Podfile.lock
+ios/Pods/**/*
+android/.gradle
+android/local.properties
+android/.idea/
+android/build/
+android/app/build/
+.DS_Store
+android/app/src/main/assets/index.android.bundle
+android/app/src/main/assets/index.android.bundle.meta
+android/app/src/main/assets/fonts/
