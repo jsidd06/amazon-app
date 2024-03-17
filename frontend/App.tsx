@@ -1,11 +1,16 @@
 import {HomeScreen} from '@src/containers/home/screens/homeScreen';
 import React from 'react';
+import {createStackNavigator} from '@react-navigation/stack';
+import {NavigationContainer} from '@react-navigation/native';
+const Stack = createStackNavigator();
 
 function App(): React.JSX.Element {
   return (
-    <>
-      <HomeScreen />
-    </>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={HomeScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
