@@ -1,16 +1,21 @@
-import {HomeScreen} from '@src/containers/home/screens/homeScreen';
+import Routes from '@src/routes';
+import {MD3LightTheme as DefaultTheme, PaperProvider} from 'react-native-paper';
 import React from 'react';
-import {createStackNavigator} from '@react-navigation/stack';
-import {NavigationContainer} from '@react-navigation/native';
-const Stack = createStackNavigator();
+
+const theme = {
+  ...DefaultTheme,
+  colors: {
+    ...DefaultTheme.colors,
+    primary: 'tomato',
+    secondary: 'yellow',
+  },
+};
 
 function App(): React.JSX.Element {
   return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Home" component={HomeScreen} />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <PaperProvider theme={theme}>
+      <Routes />
+    </PaperProvider>
   );
 }
 

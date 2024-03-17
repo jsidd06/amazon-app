@@ -1,10 +1,12 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {Image, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
+import {HeaderComponent} from '@src/components';
 
 export const HomeScreen = () => {
   return (
-    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      <Text>HomeScreen</Text>
+    <View style={[]}>
+      <HeaderComponent />
+      {/* <Image source={Images.dummy1} /> */}
     </View>
   );
 };
