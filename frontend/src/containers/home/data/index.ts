@@ -1,4 +1,4 @@
-export const data = {
+export const homeData = {
   products: [
     {
       id: 1,
