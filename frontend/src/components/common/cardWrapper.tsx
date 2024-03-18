@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native';
+import {Pressable, StyleSheet} from 'react-native';
 import React, {ReactNode} from 'react';
 import {Card} from 'react-native-paper';
 import {Colors} from '@src/themes/colors';
@@ -7,10 +7,15 @@ import {MetricsSizes} from '@src/themes/theme';
 interface CardProps {
   children?: ReactNode;
   style?: any;
+  onPress?: any;
 }
 
-export const CardWrapper = ({children, style}: CardProps) => {
-  return <Card style={[styles.root, style]}>{children}</Card>;
+export const CardWrapper = ({children, style, onPress}: CardProps) => {
+  return (
+    <Pressable onPress={onPress}>
+      <Card style={[styles.root, style]}>{children}</Card>
+    </Pressable>
+  );
 };
 
 const styles = StyleSheet.create({

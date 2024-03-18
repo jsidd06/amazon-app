@@ -3,11 +3,11 @@ import React from 'react';
 import {CText, CardWrapper, PrimaryButton, VGap} from '@src/components';
 import {MetricsSizes, layout, variant} from '@src/themes/theme';
 import {Colors} from '@src/themes/colors';
-interface HomeFragProps {
+interface AllProductsFragProps {
   data?: any[];
 }
 
-const HomeFrag = ({data}: HomeFragProps) => {
+const AllProductsFrag = ({data}: AllProductsFragProps) => {
   const renderItem = (item: any) => {
     return (
       <>
@@ -19,7 +19,7 @@ const HomeFrag = ({data}: HomeFragProps) => {
               <VGap />
               <CText variant={variant.labelLarge}>{item.name}</CText>
               <VGap />
-              <CText variant={variant.labelMedium}>{item.price}</CText>
+              <CText variant={variant.labelMedium}>$ {item.price}</CText>
               <VGap />
               <PrimaryButton>Add to cart</PrimaryButton>
               <VGap />
@@ -42,7 +42,7 @@ const HomeFrag = ({data}: HomeFragProps) => {
   );
 };
 
-export default HomeFrag;
+export default AllProductsFrag;
 
 const styles = StyleSheet.create({
   root: {

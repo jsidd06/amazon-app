@@ -1,12 +1,12 @@
 import {StyleSheet, View} from 'react-native';
 import React from 'react';
 import {CText, HeaderComponent} from '@src/components';
-import HomeFrag from '../fragments/homeFrag';
+import HomeFrag from '../fragments/AllProductsFrag';
 import {homeData} from '../data';
 import {Horizontal, layout, variant} from '@src/themes/theme';
 import {Colors} from '@src/themes/colors';
 
-export const HomeScreen = () => {
+export const AllProductsScreen = () => {
   return (
     <View style={[layout.fill, styles.root]}>
       <HeaderComponent title="Amazon" />
