@@ -3,11 +3,16 @@ import React from 'react';
 import {CText, CardWrapper, PrimaryButton, VGap} from '@src/components';
 import {MetricsSizes, layout, variant} from '@src/themes/theme';
 import {Colors} from '@src/themes/colors';
+import {useNavigator} from '@src/utils/helper';
 interface AllProductsFragProps {
   data?: any[];
 }
 
 const AllProductsFrag = ({data}: AllProductsFragProps) => {
+  const {navigateToRoute} = useNavigator();
+  const clickHandler = (item: any) => {
+    navigateToRoute('ProductListScreen', {data: item.name});
+  };
   const renderItem = (item: any) => {
     return (
       <>
@@ -21,7 +26,9 @@ const AllProductsFrag = ({data}: AllProductsFragProps) => {
               <VGap />
               <CText variant={variant.labelMedium}>$ {item.price}</CText>
               <VGap />
-              <PrimaryButton>Add to cart</PrimaryButton>
+              <PrimaryButton onPress={() => clickHandler(item)}>
+                Add to cart
+              </PrimaryButton>
               <VGap />
             </View>
           </CardWrapper>
