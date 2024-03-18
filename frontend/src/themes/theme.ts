@@ -133,3 +133,12 @@ export const layout = {
     justifyContent: 'flex-end' as 'flex-end',
   },
 };
+
+export const Horizontal = {
+  HorizontalT: MetricsSizes.TINY,
+  HorizontalS: MetricsSizes.SMALL,
+  HorizontalM: MetricsSizes.MEDIUM,
+  HorizontalL: MetricsSizes.LARGE,
+  HorizontalXL: MetricsSizes.XLARGE,
+  HorizontalXXL: MetricsSizes.XXLARGE,
+};
