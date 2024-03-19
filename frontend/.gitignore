@@ -1,19 +1,71 @@
-# React Native
+# Logs
+logs
+*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Dependency directories
+node_modules/
+ios/Pods/
+android/.gradle/
+android/app/build/
+
+# React Native CLI
+/.expo/
+/.expo-shared/
+.DS_Store
+.expo-shared/
 node_modules/
 npm-debug.log
 yarn-error.log
-*.iml
-*.log
-ios/Pods/
-ios/build/
-ios/Podfile.lock
-ios/Pods/**/*
-android/.gradle
-android/local.properties
+yarn.lock
+
+# Gradle files
 android/.idea/
+android/.gradle/
+android/local.properties
+android/.externalNativeBuild
+android/captures/
+android/.cxx/
 android/build/
-android/app/build/
+
+# Android Studio files
+*.iml
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/gradle.xml
+.idea/assetWizardSettings.xml
+.idea/dictionaries
+.idea/libraries
+.idea/modules.xml
+.idea/shelf
+.idea/gradle.xml
+.idea/workspace.xml
+.idea/gradle.properties
+.idea/misc.xml
+.idea/vcs.xml
+.idea/gradle.settings.xml
+.idea/caches
+
+# IntelliJ IDEA files
+*.iws
+*.ipr
+
+# Visual Studio Code files
+.vscode/
+
+# macOS
 .DS_Store
-android/app/src/main/assets/index.android.bundle
-android/app/src/main/assets/index.android.bundle.meta
-android/app/src/main/assets/fonts/
+.AppleDouble
+.LSOverride
+
+# npm
+**/node_modules/
+**/npm-debug.log*
+
+# ios/Pods/
+ios/Pods/
