@@ -10,6 +10,7 @@ interface AllProductsFragProps {
 
 const AllProductsFrag = ({data}: AllProductsFragProps) => {
   const {navigateToRoute} = useNavigator();
+
   const clickHandler = (item: any) => {
     navigateToRoute('ProductListScreen', {data: item.name});
   };
@@ -19,8 +20,7 @@ const AllProductsFrag = ({data}: AllProductsFragProps) => {
         <View style={[layout.fill, layout.rowCCenter, styles.subRoot]}>
           <CardWrapper>
             <View style={[layout.alignCenter]}>
-              <VGap />
-              <Image source={item.image} style={styles.img} />
+              <Image source={{uri: item.image}} style={styles.img} />
               <VGap />
               <CText variant={variant.labelLarge}>{item.name}</CText>
               <VGap />
@@ -59,9 +59,10 @@ const styles = StyleSheet.create({
     marginVertical: MetricsSizes.SMALL,
   },
   img: {
-    width: MetricsSizes.BASE100,
+    width: 160,
     height: MetricsSizes.BASE100,
-    resizeMode: 'contain',
-    borderRadius: 12,
+    resizeMode: 'cover',
+    borderTopRightRadius: 12,
+    borderTopLeftRadius: 12,
   },
 });

@@ -5,7 +5,8 @@ export const data = {
       name: "Nike Slim shirt",
       slug: "nike-slim-shirt",
       category: "Shirts",
-      image: "../data/img/d1.jpg",
+      image:
+        "https://images.pexels.com/photos/769749/pexels-photo-769749.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       price: 120,
       countInStock: 10,
       brand: "Nike",
@@ -18,7 +19,8 @@ export const data = {
       name: "Adidas Fit Shirt",
       slug: "adidas-fit-shirt",
       category: "Shirts",
-      image: "../data/img/d2.jpg",
+      image:
+        "https://images.pexels.com/photos/1195548/pexels-photo-1195548.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       price: 250,
       countInStock: 20,
       brand: "Adidas",
@@ -31,7 +33,8 @@ export const data = {
       name: "Nike Slim Pant",
       slug: "nike-slim-pant",
       category: "Pants",
-      image: "../data/img/d3.jpg",
+      image:
+        "https://images.pexels.com/photos/1895943/pexels-photo-1895943.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       price: 25,
       countInStock: 15,
       brand: "Nike",
@@ -44,7 +47,8 @@ export const data = {
       name: "Adidas Fit Pant",
       slug: "adidas-fit-pant",
       category: "Pants",
-      image: "../data/img/d4.jpg",
+      image:
+        "https://images.pexels.com/photos/914472/pexels-photo-914472.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       price: 65,
       countInStock: 5,
       brand: "Puma",
@@ -57,7 +61,8 @@ export const data = {
       name: "WoodLand Fit Pant",
       slug: "woodland-fit-pant",
       category: "woodland",
-      image: "../data/img/d5.jpg",
+      image:
+        "https://images.pexels.com/photos/2343661/pexels-photo-2343661.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       price: 165,
       countInStock: 3,
       brand: "woodland",
