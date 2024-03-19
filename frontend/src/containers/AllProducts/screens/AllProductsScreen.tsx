@@ -1,18 +1,44 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import {StyleSheet, View} from 'react-native';
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useReducer, useState} from 'react';
 import {CText, HeaderComponent} from '@src/components';
 import HomeFrag from '../fragments/AllProductsFrag';
 import {Horizontal, layout, variant} from '@src/themes/theme';
 import {Colors} from '@src/themes/colors';
 import axios from 'axios';
+import LoadingComp from '@src/components/common/loading';
+
+const reducer = (state: any, action: {type: any; payload: any}) => {
+  switch (action.type) {
+    case 'FETCH_REQ':
+      return {...state, loading: true};
+    case 'FETCH_SUCCESS':
+      return {...state, loading: false, products: action.payload};
+    case 'FETCH_ERROR':
+      return {...state, loading: true, error: action.payload};
+    default:
+      return state;
+  }
+};
 
 export const AllProductsScreen = () => {
-  const [allProducts, setAllProducts] = useState([]);
+  const [{loading, error, products}, dispatch] = useReducer(reducer, {
+    loading: true,
+    products: [],
+    error: '',
+  });
   useEffect(() => {
     const fetchData = async () => {
-      const result = await axios.get('http://localhost:8000/api/products');
-      console.log('result', result.data);
-      setAllProducts(result.data);
+      dispatch({
+        type: 'FETCH_REQ',
+        payload: undefined,
+      });
+      try {
+        const result = await axios.get('http://localhost:8000/api/products');
+        dispatch({type: 'FETCH_SUCCESS', payload: result.data});
+      } catch (err: any) {
+        dispatch({type: 'FETCH_ERROR', payload: err.message});
+      }
     };
     fetchData();
   }, []);
@@ -22,7 +48,15 @@ export const AllProductsScreen = () => {
       <CText variant={variant.displayMedium} style={[styles.text]}>
         Featured Products
       </CText>
-      <HomeFrag data={allProducts} />
+      {loading ? (
+        <LoadingComp />
+      ) : error ? (
+        <View>
+          <CText variant={variant.headlineMedium}>{error}</CText>
+        </View>
+      ) : (
+        <HomeFrag data={products} />
+      )}
     </View>
   );
 };
