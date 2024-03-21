@@ -4,6 +4,7 @@ import {CText, CardWrapper, PrimaryButton, VGap} from '@src/components';
 import {MetricsSizes, layout, variant} from '@src/themes/theme';
 import {Colors} from '@src/themes/colors';
 import {useNavigator} from '@src/utils/helper';
+import AntDesign from 'react-native-vector-icons/AntDesign';
 interface AllProductsFragProps {
   data?: any[];
 }
@@ -24,6 +25,7 @@ const AllProductsFrag = ({data}: AllProductsFragProps) => {
               <VGap />
               <CText variant={variant.labelLarge}>{item.name}</CText>
               <VGap />
+              <AntDesign name="facebook-square" size={34} />
               <CText variant={variant.labelMedium}>$ {item.price}</CText>
               <VGap />
               <PrimaryButton onPress={() => clickHandler(item)}>
