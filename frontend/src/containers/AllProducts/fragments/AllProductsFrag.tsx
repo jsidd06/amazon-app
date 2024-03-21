@@ -1,10 +1,15 @@
 import {FlatList, Image, StyleSheet, View} from 'react-native';
 import React from 'react';
-import {CText, CardWrapper, PrimaryButton, VGap} from '@src/components';
+import {
+  CText,
+  CardWrapper,
+  PrimaryButton,
+  RatingComp,
+  VGap,
+} from '@src/components';
 import {MetricsSizes, layout, variant} from '@src/themes/theme';
 import {Colors} from '@src/themes/colors';
 import {useNavigator} from '@src/utils/helper';
-import AntDesign from 'react-native-vector-icons/AntDesign';
 interface AllProductsFragProps {
   data?: any[];
 }
@@ -25,7 +30,11 @@ const AllProductsFrag = ({data}: AllProductsFragProps) => {
               <VGap />
               <CText variant={variant.labelLarge}>{item.name}</CText>
               <VGap />
-              <AntDesign name="facebook-square" size={34} />
+              <RatingComp
+                numberReviews={item.numReviews}
+                ratting={item.rating}
+              />
+              <VGap />
               <CText variant={variant.labelMedium}>$ {item.price}</CText>
               <VGap />
               <PrimaryButton onPress={() => clickHandler(item)}>
