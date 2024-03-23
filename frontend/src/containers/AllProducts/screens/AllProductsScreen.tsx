@@ -46,7 +46,7 @@ export const AllProductsScreen = () => {
   return (
     <View style={[layout.fill, styles.root]}>
       <HeaderComponent title="Amazon" />
-      <CText variant={variant.displayMedium} style={[styles.text]}>
+      <CText size={20} variant={variant.displayMedium} style={[styles.text]}>
         Featured Products
       </CText>
       {loading ? (

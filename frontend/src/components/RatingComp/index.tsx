@@ -22,7 +22,11 @@ export const RatingComp = ({
       {ratting >= 1 ? (
         <Icons.Star name="star" size={15} color={Colors.YELLOW} />
       ) : ratting >= 0.5 ? (
-        <Icons.EmptyStar name="star-o" size={15} color={Colors.YELLOW} />
+        <Icons.EmptyStar
+          name="star-half-full"
+          size={15}
+          color={Colors.YELLOW}
+        />
       ) : (
         <Icons.EmptyStar
           name="star-half-empty"
@@ -33,7 +37,11 @@ export const RatingComp = ({
       {ratting >= 2 ? (
         <Icons.Star name="star" size={15} color={Colors.YELLOW} />
       ) : ratting >= 1.5 ? (
-        <Icons.EmptyStar name="star-o" size={15} color={Colors.YELLOW} />
+        <Icons.EmptyStar
+          name="star-half-full"
+          size={15}
+          color={Colors.YELLOW}
+        />
       ) : (
         <Icons.EmptyStar
           name="star-half-empty"
@@ -44,7 +52,11 @@ export const RatingComp = ({
       {ratting >= 4 ? (
         <Icons.Star name="star" size={15} color={Colors.YELLOW} />
       ) : ratting >= 3.5 ? (
-        <Icons.EmptyStar name="star-o" size={15} color={Colors.YELLOW} />
+        <Icons.EmptyStar
+          name="star-half-full"
+          size={15}
+          color={Colors.YELLOW}
+        />
       ) : (
         <Icons.EmptyStar
           name="star-half-empty"
@@ -55,7 +67,11 @@ export const RatingComp = ({
       {ratting >= 5 ? (
         <Icons.Star name="star" size={15} color={Colors.YELLOW} />
       ) : ratting >= 1.5 ? (
-        <Icons.EmptyStar name="star-o" size={15} color={Colors.YELLOW} />
+        <Icons.EmptyStar
+          name="star-half-full"
+          size={15}
+          color={Colors.YELLOW}
+        />
       ) : (
         <Icons.EmptyStar
           name="star-half-empty"
@@ -66,7 +82,11 @@ export const RatingComp = ({
       {ratting >= 4.5 ? (
         <Icons.Star name="star" size={15} color={Colors.YELLOW} />
       ) : ratting >= 1.5 ? (
-        <Icons.EmptyStar name="star-o" size={15} color={Colors.YELLOW} />
+        <Icons.EmptyStar
+          name="star-half-full"
+          size={15}
+          color={Colors.YELLOW}
+        />
       ) : (
         <Icons.EmptyStar
           name="star-half-empty"

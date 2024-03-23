@@ -1,11 +1,11 @@
 import React from 'react';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {IconProps} from 'react-native-vector-icons/Icon';
 
 const Icons = {
   LeftArrow: (
     props: (React.ClassAttributes<Icon> & IconProps) | null | undefined,
-  ) => React.createElement(Icon, {name: 'angle-left', ...props}),
+  ) => React.createElement(Icon, {name: 'arrow-left', ...props}),
   RightArrow: (
     props: (React.ClassAttributes<Icon> & IconProps) | null | undefined,
   ) => React.createElement(Icon, {name: 'angle-right', ...props}),
@@ -13,7 +13,10 @@ const Icons = {
     React.createElement(Icon, {name: 'star', ...props}),
   EmptyStar: (
     props: (React.ClassAttributes<Icon> & IconProps) | null | undefined,
-  ) => React.createElement(Icon, {name: 'star-o', ...props}),
+  ) => React.createElement(Icon, {name: 'star-half-full', ...props}),
+  store: (
+    props: (React.ClassAttributes<Icon> & IconProps) | null | undefined,
+  ) => React.createElement(Icon, {name: 'storefront-outline', ...props}),
 };
 
 export {Icons};

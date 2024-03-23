@@ -56,7 +56,7 @@ export const ProductListScreen = () => {
 
   return (
     <View style={[layout.fill, {backgroundColor: Colors.WHITE}]}>
-      <HeaderComponent title={product.name} icon={true} />
+      <HeaderComponent heading={product.name} rightIcon icon={true} />
       {loading ? (
         <LoadingComp />
       ) : error ? (
