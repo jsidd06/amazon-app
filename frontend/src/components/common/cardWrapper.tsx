@@ -25,6 +25,5 @@ const styles = StyleSheet.create({
     borderRadius: 16,
     width: MetricsSizes.SCREEN_WIDTH * 0.4,
     backgroundColor: Colors.WHITE,
-    marginHorizontal: MetricsSizes.TINY,
   },
 });

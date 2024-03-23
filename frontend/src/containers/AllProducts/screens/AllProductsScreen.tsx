@@ -7,6 +7,7 @@ import {Horizontal, layout, variant} from '@src/themes/theme';
 import {Colors} from '@src/themes/colors';
 import axios from 'axios';
 import LoadingComp from '@src/components/common/loading';
+import {ErrorComp} from '@src/components/common/error';
 
 const reducer = (state: any, action: {type: any; payload: any}) => {
   switch (action.type) {
@@ -51,9 +52,7 @@ export const AllProductsScreen = () => {
       {loading ? (
         <LoadingComp />
       ) : error ? (
-        <View>
-          <CText variant={variant.headlineMedium}>{error}</CText>
-        </View>
+        <ErrorComp error={error} />
       ) : (
         <HomeFrag data={products} />
       )}

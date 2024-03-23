@@ -1,10 +1,10 @@
 import {View} from 'react-native';
 import React, {useEffect, useReducer} from 'react';
-import {CText, HeaderComponent} from '@src/components';
+import {ErrorComp, HeaderComponent} from '@src/components';
 import {useRoute} from '@react-navigation/native';
 import axios from 'axios';
 import LoadingComp from '@src/components/common/loading';
-import {layout, variant} from '@src/themes/theme';
+import {layout} from '@src/themes/theme';
 import {ProductListFrag} from '../fragments/ProductListFrag';
 import {Colors} from '@src/themes/colors';
 
@@ -60,9 +60,7 @@ export const ProductListScreen = () => {
       {loading ? (
         <LoadingComp />
       ) : error ? (
-        <View>
-          <CText variant={variant.bodySmall}>{error}</CText>
-        </View>
+        <ErrorComp error={error} />
       ) : (
         <ProductListFrag data={product} />
       )}
