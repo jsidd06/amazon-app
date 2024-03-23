@@ -15,7 +15,7 @@ const reducer = (state: any, action: {type: any; payload: any}) => {
     case 'FETCH_SUCCESS':
       return {...state, loading: false, products: action.payload};
     case 'FETCH_ERROR':
-      return {...state, loading: true, error: action.payload};
+      return {...state, loading: false, error: action.payload};
     default:
       return state;
   }

@@ -1,4 +1,4 @@
-import {Image, Pressable, SafeAreaView, StyleSheet} from 'react-native';
+import {Pressable, SafeAreaView, StyleSheet} from 'react-native';
 import React from 'react';
 import {Colors} from '@src/themes/colors';
 import {CText} from '..';
@@ -22,7 +22,11 @@ export const HeaderComponent = ({title, icon}: HeaderComponentProps) => {
         <Pressable
           onPress={() => navigation.goBack()}
           style={[layout.rowACenter, styles.imgCtn]}>
-          <Image style={styles.img} source={Icons.left} />
+          <Icons.LeftArrow
+            name="long-arrow-left"
+            size={25}
+            color={Colors.BLACK}
+          />
           <CText
             style={{...styles.text, marginLeft: Horizontal.HorizontalM}}
             variant={variant.displayMedium}>

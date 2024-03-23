@@ -18,7 +18,7 @@ const AllProductsFrag = ({data}: AllProductsFragProps) => {
   const {navigateToRoute} = useNavigator();
 
   const clickHandler = (item: any) => {
-    navigateToRoute('ProductListScreen', {data: item.name});
+    navigateToRoute('ProductListScreen', {data: item.id});
   };
   const renderItem = (item: any) => {
     return (

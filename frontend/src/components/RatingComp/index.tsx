@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 import {View} from 'react-native';
 import React from 'react';
 import {Icons} from '@src/themes/icons';
@@ -11,7 +12,6 @@ interface RatingCompProps {
 }
 
 export const RatingComp = ({ratting, numberReviews}: RatingCompProps) => {
-  console.log('rat', ratting);
   return (
     <View style={[layout.rowCCenter]}>
       {ratting >= 1 ? (
