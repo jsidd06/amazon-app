@@ -9,11 +9,16 @@ import {CText} from '..';
 interface RatingCompProps {
   ratting: any;
   numberReviews: number;
+  style?: any;
 }
 
-export const RatingComp = ({ratting, numberReviews}: RatingCompProps) => {
+export const RatingComp = ({
+  ratting,
+  numberReviews,
+  style,
+}: RatingCompProps) => {
   return (
-    <View style={[layout.rowCCenter]}>
+    <View style={[layout.rowCCenter, style]}>
       {ratting >= 1 ? (
         <Icons.Star name="star" size={15} color={Colors.YELLOW} />
       ) : ratting >= 0.5 ? (

@@ -4,7 +4,9 @@ import {CText, HeaderComponent} from '@src/components';
 import {useRoute} from '@react-navigation/native';
 import axios from 'axios';
 import LoadingComp from '@src/components/common/loading';
-import {variant} from '@src/themes/theme';
+import {layout, variant} from '@src/themes/theme';
+import {ProductListFrag} from '../fragments/ProductListFrag';
+import {Colors} from '@src/themes/colors';
 
 interface RouteParams {
   data: object;
@@ -25,13 +27,13 @@ const reducer = (state: any, action: {type: any; payload: any}) => {
 export const ProductListScreen = () => {
   const route = useRoute();
   const id = route?.params as RouteParams;
-  console.log('id', id.data);
+
   const [{loading, error, product}, dispatch] = useReducer(reducer, {
     loading: true,
     product: [],
     error: '',
   });
-  console.log('product', product);
+
   useEffect(() => {
     const fetchData = async () => {
       dispatch({
@@ -51,8 +53,9 @@ export const ProductListScreen = () => {
     };
     fetchData();
   }, [id]);
+
   return (
-    <View>
+    <View style={[layout.fill, {backgroundColor: Colors.WHITE}]}>
       <HeaderComponent title={product.name} icon={true} />
       {loading ? (
         <LoadingComp />
@@ -61,9 +64,7 @@ export const ProductListScreen = () => {
           <CText variant={variant.bodySmall}>{error}</CText>
         </View>
       ) : (
-        <View>
-          <CText variant={variant.displaySmall}>{product.name}</CText>
-        </View>
+        <ProductListFrag data={product} />
       )}
     </View>
   );

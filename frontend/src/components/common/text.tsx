@@ -7,12 +7,28 @@ import {FONTSIZE} from '@src/themes/theme';
 interface CTextProps {
   children?: React.ReactNode;
   style?: any;
-  variant: any;
+  variant?: any;
+  size?: number;
+  fontWeight?: string;
+  color?: string;
 }
 
-export const CText = ({children, style, variant}: CTextProps) => {
+export const CText = ({
+  children,
+  style,
+  variant,
+  size,
+  fontWeight,
+  color,
+}: CTextProps) => {
   return (
-    <Text variant={variant} style={[styles.text, style]}>
+    <Text
+      variant={variant}
+      style={[
+        styles.text,
+        style,
+        {fontSize: size, fontWeight: fontWeight, color: color},
+      ]}>
       {children}
     </Text>
   );

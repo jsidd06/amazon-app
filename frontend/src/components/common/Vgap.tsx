@@ -1,4 +1,4 @@
-import {StyleSheet, View} from 'react-native';
+import {View} from 'react-native';
 import React from 'react';
 import {MetricsSizes} from '@src/themes/theme';
 
@@ -7,11 +7,5 @@ interface VGapProps {
 }
 
 export const VGap = ({gap}: VGapProps) => {
-  return <View style={[styles.root, gap]} />;
+  return <View style={[{marginVertical: gap ? gap : MetricsSizes.TINY}]} />;
 };
-
-const styles = StyleSheet.create({
-  root: {
-    marginVertical: MetricsSizes.TINY,
-  },
-});

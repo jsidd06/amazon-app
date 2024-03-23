@@ -22,7 +22,7 @@ export const data = {
       image:
         "https://images.pexels.com/photos/1195548/pexels-photo-1195548.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       price: 250,
-      countInStock: 20,
+      countInStock: 0,
       brand: "Adidas",
       rating: 4.0,
       numReviews: 10,

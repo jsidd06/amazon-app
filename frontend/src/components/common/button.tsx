@@ -1,7 +1,7 @@
 import {Pressable, StyleSheet} from 'react-native';
 import React, {ReactNode} from 'react';
 import {CText} from '..';
-import {FONTSIZE, MetricsSizes, layout, variant} from '@src/themes/theme';
+import {MetricsSizes, layout, variant} from '@src/themes/theme';
 import {Colors} from '@src/themes/colors';
 
 interface PrimaryButtonProps {
@@ -19,7 +19,7 @@ export const PrimaryButton = ({
     <Pressable
       onPress={onPress}
       style={[styles.btn, style, layout.alignCenter]}>
-      <CText style={styles.test} variant={variant.labelSmall}>
+      <CText color={Colors.WHITE} size={14} variant={variant.labelSmall}>
         {children}
       </CText>
     </Pressable>
@@ -32,9 +32,5 @@ const styles = StyleSheet.create({
     width: MetricsSizes.BASE100,
     height: MetricsSizes.XLARGE,
     borderRadius: 8,
-  },
-  test: {
-    color: Colors.WHITE,
-    fontSize: FONTSIZE.px13,
   },
 });
